@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./resource/whut_logo.ico" type="image/x-icon">
+  <title>武汉理工大学智能计算实验室</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/mbs.css">
+</head>
+
+<body>
+  <!-- 页眉占位符 -->
+  <div id="header-placeholder"></div>
+
+
+  <div class="site-body">
+
+    <hr>
+    <div class="pagetitle">
+      <div class="container">
+        <h1>成员</h1>
+      </div>
+    </div>
+    <hr>
+
+    <h3>教职人员</h3>
+    <div class="professor mbs-css">
+
+    </div>
+
+    <hr style="border: none;border-top: 1px dashed #B8C0C6;">
+
+    <h3>博士后</h3>
+    <div class="postdoc mbs-css">
+
+    </div>
+
+    <hr style="border: none;border-top: 1px dashed #B8C0C6;">
+
+    <h3>博士研究生</h3>
+    <div class="phd mbs-css">
+
+    </div>
+
+    <hr style="border: none;border-top: 1px dashed #B8C0C6;">
+
+    <h3>硕士研究生</h3>
+    <div class="master mbs-css">
+
+    </div>
+
+    <hr style="border: none;border-top: 1px dashed #B8C0C6;">
+
+    <h3>已毕业校友</h3>
+    <div class="alumni mbs-css">
+
+    </div>
+
+    <hr>
+  </div>
+
+
+
+  <!-- 页脚占位符 -->
+  <div id="footer-placeholder"></div>
+
+
+  <script>
+    fetch('/data/members.json')
+      .then(response => response.json())
+      .then(data => {
+        // 更新教授信息
+        updateProfessor(data.professor, '.professor');
+
+        // 更新其他类别信息
+        updateStudents(data.postdoc, '.postdoc');
+        updateStudents(data.phd, '.phd');
+        updateStudents(data.master, '.master');
+        updateStudents(data.alumni, '.alumni');
+      });
+    function updateProfessor(members, containerClass) {
+      const container = document.querySelector(containerClass);
+      container.innerHTML = '';
+      members.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.className = 'member-card';
+        memberDiv.innerHTML = `
+            <div class="member-pic">
+                <img src="${member.img || '/resource/demo.jpg'}" alt="${member.name}">
+            </div>
+            <p class="member-name">${member.profileUrl ? `<a href="${member.profileUrl}">${member.name}</a>` : member.name}</p>
+            <p class="member-title">${member.title}</p>
+            <p class="member-intro">${member.field}</p>`;
+        container.appendChild(memberDiv);
+      });
+    }
+
+    function updateStudents(members, containerClass) {
+      const container = document.querySelector(containerClass);
+      container.innerHTML = '';
+      members.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.className = 'stu';
+        memberDiv.innerHTML = `
+            <p class="stu-name">${member.profileUrl ? `<a href="${member.profileUrl}">${member.name}</a>` : member.name}</p>
+            <p class="stu-intro">${member.field}</p>`;
+        container.appendChild(memberDiv);
+      });
+    }
+    document.getElementById("menuButton").addEventListener("click", function () {
+      var content = document.getElementById("menu_list");
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+    window.addEventListener('resize', function () {
+      var menuList = document.getElementById('menu_list');
+      if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
+        menuList.style.display = 'none';
+        menuList.style.maxHeight = null;
+      }
+    });
+
+
+  </script>
+  <script src="/js/components.js"></script>
+</body>
+
+</html>

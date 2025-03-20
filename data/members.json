@@ -1,0 +1,195 @@
+{
+  "professor": [
+    {
+      "name": "XXX",
+      "img": "/resource/demo.jpg",
+      "field": "计算机视觉",
+      "title": "教授",
+      "profileUrl": "ZyKINvice.cn"
+    },
+    {
+      "name": "XXX",
+      "img": "/resource/demo.jpg",
+      "field": "计算机视觉",
+      "title": "教授",
+      "profileUrl": "ZyKINvice.cn"
+    },
+    {
+      "name": "XXX",
+      "img": "/resource/demo.jpg",
+      "field": "计算机视觉",
+      "title": "教授",
+      "profileUrl": "ZyKINvice.cn"
+    },
+    {
+      "name": "XXX",
+      "img": "/resource/demo.jpg",
+      "field": "计算机视觉",
+      "title": "教授",
+      "profileUrl": "ZyKINvice.cn"
+    }
+  ],
+  "postdoc": [
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    }
+  ],
+  "phd": [
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    }
+  ],
+  "master": [
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    },
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    }
+  ],
+  "alumni": [
+    {
+      "name": "张三",
+      "field": "自然语言处理",
+      "profileUrl": "github.com"
+    }
+  ]
+}

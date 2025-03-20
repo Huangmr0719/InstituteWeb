@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resource/whut_logo.ico" type="image/x-icon">
+    <title>武汉理工大学智能计算实验室</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/components.js"></script>
+</head>
+
+<body>
+    <!-- 页眉占位符 -->
+    <div id="header-placeholder"></div>
+
+
+    <div class="site-body">
+        <hr>
+        <div class="pagetitle">
+            <div class="container">
+                <h1>加入我们</h1>
+            </div>
+            <hr>
+        </div>
+
+
+
+            <div class="join-content" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+                <div class="join-section" style="margin-bottom: 40px;">
+                    <h2 style="color: #003366; margin-bottom: 20px;">欢迎加入智能计算的前沿探索</h2>
+                    <p style="color: #424242; font-size: 18px; line-height: 1.6; margin-bottom: 20px;">
+                        武汉理工大学智能计算实验室诚邀对未来充满激情的您，共同开启人工智能的新篇章。在这里，您将有机会与国内外顶尖专家一起工作，深入研究自然语言处理、计算机视觉、多模态处理、自动驾驶、基因测序等多个领域。我们的实验室不仅拥有先进的设备和平台，更提供了一个充满挑战和创新的学术环境。
+                    </p>
+                </div>
+
+                <div class="join-section" style="margin-bottom: 40px;">
+                    <h2 style="color: #003366; margin-bottom: 20px;">研究方向</h2>
+                    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 10px;">
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li style="color: #424242; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">🔹 自然语言处理：机器翻译、文本生成、问答系统</li>
+                            <li style="color: #424242; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">🔹 计算机视觉：图像识别、视频理解</li>
+                            <li style="color: #424242; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">🔹 多模态处理：音视频交互</li>
+                            <li style="color: #424242; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">🔹 自动驾驶技术</li>
+                            <li style="color: #424242; font-size: 18px; line-height: 1.6;">🔹 基因组分析</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="join-section" style="margin-bottom: 40px;">
+                    <h2 style="color: #003366; margin-bottom: 20px;">我们的成就</h2>
+                    <p style="color: #424242; font-size: 18px; line-height: 1.6; margin-bottom: 20px;">
+                        我们的研究成果已在多个国际学术会议和期刊上发表，并获得了众多国家级和省部级奖励，证明了我们在人工智能领域的实力和影响力。加入我们，您将有机会参与到这些激动人心的项目中，与团队一起推动科技的边界，为社会做出贡献。
+                    </p>
+                </div>
+
+                <div class="join-section" style="text-align: center; background-color: #e3f2fd; padding: 30px; border-radius: 10px;">
+                    <h2 style="color: #003366; margin-bottom: 20px;">期待您的加入</h2>
+                    <p style="color: #424242; font-size: 18px; line-height: 1.6;">
+                        武汉理工大学智能计算实验室期待着您的加入，一起追求卓越，服务社会，为中国乃至全球的人工智能事业贡献力量。
+                    </p>
+                </div>
+            </div>
+
+        <hr>
+    </div>
+
+
+
+    <div id="footer-placeholder"></div>
+    </div>
+
+    <script>
+        document.getElementById("menuButton").addEventListener("click", function () {
+            var content = document.getElementById("menu_list");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+        window.addEventListener('resize', function () {
+            var menuList = document.getElementById('menu_list');
+            if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
+                menuList.style.display = 'none';
+                menuList.style.maxHeight = null;
+            }
+        });
+
+    </script>
+</body>
+
+</html>

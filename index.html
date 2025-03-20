@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./resource/whut_logo.ico" type="image/x-icon" />
+    <title>武汉理工大学智能计算实验室</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/components.js"></script>
+
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="site-body">
+        <div class="welcome-section">
+            <div class="welcome-content">
+                <h1 class="welcome-title">欢迎来到<br>武汉理工大学智能计算实验室</h1>
+                <p class="welcome-subtitle">追求卓越 · 服务社会</p>
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <div class="intro-card">
+                <div class="intro-icon">🔬</div>
+                <h3>研究方向</h3>
+                <p>致力于自然语言处理、计算机视觉、多模态处理、自动驾驶、基因测序等前沿领域的研究。拥有先进的实验设备和平台，开展具有国际影响力的科研工作。</p>
+            </div>
+
+            <div class="intro-card">
+                <div class="intro-icon">🎯</div>
+                <h3>研究成果</h3>
+                <p>在机器翻译、图像识别、多模态处理、智能驾驶等方面取得突破性进展。研究成果发表于多个国际学术会议和期刊，获得多项国家级和省部级科研奖励。</p>
+            </div>
+
+            <div class="intro-card">
+                <div class="intro-icon">👥</div>
+                <h3>团队优势</h3>
+                <p>拥有一支由国内外知名专家学者组成的科研团队，培养了众多优秀人才。团队成员在各自领域均有深入研究和突出贡献。</p>
+            </div>
+        </div>
+
+        <div class="research-areas">
+            <h2>重点研究领域</h2>
+            <div class="area-grid">
+                <div class="area-item">
+                    <h4>自然语言处理</h4>
+                    <p>机器翻译、文本生成、文本理解、问答系统</p>
+                </div>
+                <div class="area-item">
+                    <h4>计算机视觉</h4>
+                    <p>图像识别、图像分割、图像生成、视频理解</p>
+                </div>
+                <div class="area-item">
+                    <h4>多模态处理</h4>
+                    <p>音视频处理、跨模态学习、多模态融合</p>
+                </div>
+                <div class="area-item">
+                    <h4>自动驾驶</h4>
+                    <p>智能感知、决策规划、自动控制</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="news-section">
+        <h2>新闻动态</h2>
+        <div class="news-container">
+
+        </div>
+        <div class="news-more">
+            <a href="/news.html" class="more-link">查看更多新闻</a>
+        </div>
+    </div>
+
+    <script>
+        // 加载新闻数据
+        fetch('./data/news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsContainer = document.querySelector('.news-container');
+                // 按日期排序并只显示最新的6条新闻
+                const sortedNews = data.news.sort((a, b) => {
+                    return new Date(b.date) - new Date(a.date);
+                }).slice(0, 6);
+
+                sortedNews.forEach(item => {
+                    const newsCard = document.createElement('div');
+                    newsCard.className = 'news-card';
+                    newsCard.innerHTML = `
+                        <div class="news-date">${item.date}</div>
+                        <h3 class="news-title">${item.title}</h3>
+                        <p class="news-content">${item.content}</p>
+                        <a href="/news.html" class="news-link">阅读更多</a>
+                    `;
+                    newsContainer.appendChild(newsCard);
+                });
+            });
+    </script>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+
+        document.getElementById("menuButton").addEventListener("click", function () {
+            var content = document.getElementById("menu_list");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+        window.addEventListener('resize', function () {
+            var menuList = document.getElementById('menu_list');
+            if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
+                menuList.style.display = 'none';
+                menuList.style.maxHeight = null;
+            }
+        });
+        
+        // 加载新闻数据
+        fetch('/data/news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsContainer = document.querySelector('.news-container');
+                data.news.forEach(item => {
+                    const newsCard = document.createElement('div');
+                    newsCard.className = 'news-card';
+                    newsCard.innerHTML = `
+                        <div class="news-date">${item.date}</div>
+                        <h3 class="news-title">${item.title}</h3>
+                        <p class="news-content">${item.content}</p>
+                        <a href="${item.link}" class="news-link">阅读更多</a>
+                    `;
+                    newsContainer.appendChild(newsCard);
+                });
+            });
+
+
+    </script>
+</body>
+
+</html>

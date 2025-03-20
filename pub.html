@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resource/whut_logo.ico" type="image/x-icon">
+    <title>武汉理工大学智能计算实验室</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/pub.css">
+    <script src="./js/components.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+
+    <div class="site-body">
+        <hr>
+        <div class="pagetitle">
+            <div class="container">
+                <h1>论文</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="paper-body">
+
+            
+        </div>
+        <hr>
+
+    <!-- Modal Structure for Bibtex -->
+    <div id="bibtexModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bibtexModal')">&times;</span>
+            <pre id="bibtexContent" style="white-space: pre-wrap;"></pre>
+        </div>
+    </div>
+
+    <!-- Modal Structure for Abstract -->
+    <div id="abstractModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('abstractModal')">&times;</span>
+            <pre id="abstractContent" style="white-space: pre-wrap;"></pre>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/data/papers.json') // 替换为您的JSON文件实际路径
+            .then(response => response.json())
+            .then(data => {
+                const paperContainer = document.querySelector('.paper-body'); // 选择包含论文的容器
+                paperContainer.innerHTML = ''; // 清空现有内容
+
+                data.papers.forEach(paper => {
+                    const paperDiv = document.createElement('div');
+                    paperDiv.className = 'paper';
+                    paperDiv.innerHTML = `
+                <div class="paper-title">
+                    <strong>${paper.title}</strong>
+                </div>
+                <div class="paper-info">
+                    <p class="paper-author">${paper.authors}</p>
+                    <p class="paper-sub">${paper.conference}</p>
+                    <p>
+                        <a href="${paper.pdfLink}"><button type="button">PDF</button></a>
+                        <a href="${paper.codeLink}"><button type="button">Code</button></a>
+                        
+                        <button type="button" class="absButton" onclick="showAbstract()">Abstract</button>
+                        <button type="button" class="bibButton" onclick="showBibtex()">Bibtex</button>
+                        
+                        <pre class="abstract" style="display: none;">${paper.abs}</pre>
+                        <pre class="bibtex" style="display: none;">${paper.bibtex}</pre>
+                    </p>
+                    
+                </div>`;
+                    paperContainer.appendChild(paperDiv); // 将每篇论文的信息添加到容器中
+                });
+            })
+        document.getElementById("menuButton").addEventListener("click", function () {
+            var content = document.getElementById("menu_list");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+        window.addEventListener('resize', function () {
+            var menuList = document.getElementById('menu_list');
+            if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
+                menuList.style.display = 'none';
+                menuList.style.maxHeight = null;
+            }
+        });
+        document.querySelectorAll('.bibButton').forEach(function (button, index) {
+            button.addEventListener('click', function () {
+                // 获取与当前按钮对应的pre元素
+                var preContent = document.querySelectorAll('.bibtex')[index];
+
+                if (preContent.style.height === '0px') {
+                    preContent.style.height = preContent.scrollHeight + 'px';
+                } else {
+                    preContent.style.height = '0px';
+                }
+            });
+        });
+        function showBibtex() {
+            var bibtexContent = event.target.closest('.paper').querySelector('.bibtex').textContent;
+            document.getElementById('bibtexContent').textContent = bibtexContent;
+            var modal = document.getElementById('bibtexModal');
+            modal.style.display = 'flex';
+            requestAnimationFrame(() => {
+                modal.classList.add('show');
+            });
+        }
+
+        function showAbstract() {
+            var abstractContent = event.target.closest('.paper').querySelector('.abstract').textContent;
+            document.getElementById('abstractContent').textContent = abstractContent;
+            var modal = document.getElementById('abstractModal');
+            modal.style.display = 'flex';
+            requestAnimationFrame(() => {
+                modal.classList.add('show');
+            });
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+
+</html>

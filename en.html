@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resource/whut_logo.ico" type="image/x-icon">
+    <title>WHUT Intelligent Computing Lab</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <div class="header_">
+                <div class="header_logo" style="display: block;">
+                    <a href="./index.html"><img src="./resource/logo.png" /></a>
+                </div>
+
+                <div class="header_menu">
+                    <button type="button" id="menuButton"><img src="./resource/menu.png" alt=""></button>
+                </div>
+
+            </div>
+
+            <div class="header_list" id="list">
+                <ul>
+                    <li><a href="./mbs.html" target="_parent">Members</a></li>
+                    <li><a href="./pub.html" target="_parent">Publications</a></li>
+                    <li><a href="./code.html" target="_parent">Projects</a></li>
+                    <li><a href="./join.html" target="_parent">Join</a></li>
+                </ul>
+            </div>
+
+
+            <div id="menu_list" style="display: none;">
+                <hr>
+                <p><a href="./mbs.html" target="_parent">Members</a></p>
+                <p><a href="./pub.html" target="_parent">Publications</a></p>
+                <p><a href="./code.html" target="_parent">Projects</a></p>
+                <p><a href="./join.html" target="_parent">Join</a></p>
+            </div>
+
+
+        </div>
+    </header>
+
+
+    <div class="site-body">
+        <div class="welcome-section">
+            <div class="welcome-content">
+                <h1 class="welcome-title">Welcome to<br>WHUT Intelligent Computing Lab</h1>
+                <p class="welcome-subtitle">Pursuing Excellence · Serving Society</p>
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <div class="intro-card">
+                <div class="intro-icon">🔬</div>
+                <h3>Research Focus</h3>
+                <p>Dedicated to advancing research in natural language processing, computer vision, multimodal processing, autonomous driving, and gene sequencing. Equipped with cutting-edge facilities and platforms to conduct internationally influential research.</p>
+            </div>
+
+            <div class="intro-card">
+                <div class="intro-icon">🎯</div>
+                <h3>Achievements</h3>
+                <p>Breakthrough achievements in machine translation, image recognition, multimodal processing, and intelligent driving. Research published in prestigious international conferences and journals, earning multiple national and provincial awards.</p>
+            </div>
+
+            <div class="intro-card">
+                <div class="intro-icon">👥</div>
+                <h3>Team Strength</h3>
+                <p>A research team composed of renowned experts and scholars from home and abroad, nurturing numerous outstanding talents. Team members have made significant contributions in their respective fields.</p>
+            </div>
+        </div>
+
+        <div class="research-areas">
+            <h2>Key Research Areas</h2>
+            <div class="area-grid">
+                <div class="area-item">
+                    <h4>Natural Language Processing</h4>
+                    <p>Machine Translation, Text Generation, Text Understanding, QA Systems</p>
+                </div>
+                <div class="area-item">
+                    <h4>Computer Vision</h4>
+                    <p>Image Recognition, Image Segmentation, Image Generation, Video Understanding</p>
+                </div>
+                <div class="area-item">
+                    <h4>Multimodal Processing</h4>
+                    <p>Audio-Visual Processing, Cross-Modal Learning, Multimodal Fusion</p>
+                </div>
+                <div class="area-item">
+                    <h4>Autonomous Driving</h4>
+                    <p>Intelligent Perception, Decision Planning, Automatic Control</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2 class="footer-title">WHUT Intelligent Computing Lab</h2>
+                <div class="footer-info">
+                    <p>Address: 122 Luoshi Road, Wuhan, Hubei, P.R.China</p>
+                    <p>Postcode: 430070</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h2 class="footer-title">Connect</h2>
+                <div class="footer-links">
+                    <a href="https://github.com/Huangmr0719/LabHomeWeb" class="footer-link">
+                        <img src="./resource/github-fill.png" alt="GitHub" />
+                        Github
+                    </a>
+                    <a href="mailto:duanpf@whut.edu.cn" class="footer-link">
+                        <img src="./resource/email-fill.png" alt="Email" />
+                        duanpf@whut.edu.cn
+                    </a>
+                    <a href="https://gitee.com/mindspore/mindspore.git" class="footer-link">
+                        <img src="./resource/gitee.png" alt="Gitee" />
+                        Gitee
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h2 class="footer-title">Local Links</h2>
+                <div class="footer-links">
+                    <a href="https://www.whut.edu.cn/" target="_blank" class="footer-link">
+                        Wuhan University of Technology
+                    </a>
+                    <a href="http://cst.whut.edu.cn/" target="_blank" class="footer-link">
+                        School of Computer Science and Artificial Intelligence
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="./index.html" class="language-switch">
+                <img src="./resource/language.png" alt="Language" />
+            </a>
+            <p class="copyright-text">Copyright © 2024-2025 WHUT Intelligent Computing Lab</p>
+        </div>
+
+    </footer>
+    </div>
+
+    <script>
+        document.getElementById("menuButton").addEventListener("click", function () {
+            var content = document.getElementById("menu_list");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+        window.addEventListener('resize', function () {
+            var menuList = document.getElementById('menu_list');
+            if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
+                menuList.style.display = 'none';
+                menuList.style.maxHeight = null;
+            }
+        });
+
+    </script>
+
+    </footer>
+</body>
+
+</html>

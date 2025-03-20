@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../resource/whut_logo.ico" type="image/x-icon" />
+    <title>新闻动态 - 武汉理工大学智能计算实验室</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="./js/components.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="site-body">
+        <hr>
+        <div class="pagetitle">
+            <div class="container">
+                <h1>新闻动态</h1>
+            </div>
+        </div>
+        <hr>
+
+        <div class="news-page-container">
+            <!-- 新闻列表将通过JavaScript动态加载 -->
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('./data/news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsContainer = document.querySelector('.news-page-container');
+                // 按日期排序显示所有新闻
+                const sortedNews = data.news.sort((a, b) => {
+                    return new Date(b.date) - new Date(a.date);
+                });
+
+                sortedNews.forEach(item => {
+                    const newsCard = document.createElement('div');
+                    newsCard.className = 'news-page-card';
+                    newsCard.innerHTML = `
+                        <div class="news-page-date">${item.date}</div>
+                        <h3 class="news-page-title">${item.title}</h3>
+                        <p class="news-page-content">${item.content}</p>
+                    `;
+                    newsContainer.appendChild(newsCard);
+                });
+            });
+    </script>
+</body>
+</html>
