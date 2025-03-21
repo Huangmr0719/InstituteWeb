@@ -1,47 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/resource/whut_logo.ico" type="image/x-icon">
-    <title>武汉理工大学智能计算实验室</title>
+    <link rel="icon" href="/resource/logo.ico" type="image/x-icon">
+    <title>武汉学院交叉学科数智应用研究院</title>
     <link rel="stylesheet" href="/css/index.css">
-    <style>
-        .code {
-            margin: 20px;
-            background-color: #FDFDFD;
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        .code button {
-            background-color: #E3F2FD;
-            border-radius: 3px;
-            border: 0;
-            color: #757575;
-        }
-
-        .code-title {
-            font-family: Times New Roman, serif;
-            font-size: 25px;
-            font-weight: bolder;
-        }
-
-        .code-author {
-            font-family: Times New Roman, serif;
-            font-size: 17px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/project.css">
     <script src="/js/components.js"></script>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
-
 
     <div class="site-body">
         <hr>
@@ -51,65 +24,68 @@
             </div>
         </div>
         <hr>
-        <div class="code-body">
-            
+        <div class="project-body">
         </div>
-
         <hr>
+
+        <!-- Modal Structure for Description -->
+        <div id="descModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('descModal')">&times;</span>
+                <pre id="descContent" style="white-space: pre-wrap;"></pre>
+            </div>
+        </div>
     </div>
-
-
 
     <div id="footer-placeholder"></div>
 
     <script>
-        // JavaScript代码
-        fetch('/data/projects.json') // 替换为您JSON文件的实际路径
+        fetch('/data/projects.json')
             .then(response => response.json())
             .then(data => {
-                const container = document.querySelector('.code-body'); // 选择容器元素
-                container.innerHTML = ''; // 清空现有内容
-                data.codes.forEach(code => {
-                    const codeDiv = document.createElement('div');
-                    codeDiv.className = 'code';
-                    codeDiv.innerHTML = `
-                <div class="code-title">
-                    <strong>${code.title}</strong>
-                </div>
-                <div class="code-info">
-                    <p class="code-author">${code.authors}</p>
-                    <p>
-                        <a href="${code.pdfLink}"><button type="button">pdf</button></a>
-                        <a href="${code.codeLink}"><button type="button">code</button></a>
-                    </p>
-                </div>`;
-                    container.appendChild(codeDiv); // 将新元素添加到容器
+                const container = document.querySelector('.project-body');
+                container.innerHTML = '';
+                data.codes.forEach(project => {
+                    const projectDiv = document.createElement('div');
+                    projectDiv.className = 'project';
+                    projectDiv.innerHTML = `
+                        <div class="project-content">
+                            <div class="project-title">${project.title}</div>
+                            <div class="project-type">${project.type}</div>
+                            <div class="project-intro">${project.intro}</div>
+                        </div>
+                        <div class="project-image">
+                            <img src="${project.image || '/resource/project-default.jpg'}" alt="${project.title}">
+                        </div>`;
+                    container.appendChild(projectDiv);
                 });
             });
-        document.getElementById("menuButton").addEventListener("click", function () {
-            var content = document.getElementById("menu_list");
-            if (content.style.display === "none") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-        window.addEventListener('resize', function () {
-            var menuList = document.getElementById('menu_list');
-            if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
-                menuList.style.display = 'none';
-                menuList.style.maxHeight = null;
-            }
-        });
+    </script>
 
+        function showDesc() {
+            var descContent = event.target.closest('.project').querySelector('.description').textContent;
+            document.getElementById('descContent').textContent = descContent;
+            var modal = document.getElementById('descModal');
+            modal.style.display = 'flex';
+            requestAnimationFrame(() => {
+                modal.classList.add('show');
+            });
+        }
 
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
 
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
     </script>
 </body>
-
 </html>

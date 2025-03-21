@@ -1,16 +1,11 @@
 {
-  "codes": [
-    {
-      "title": "VidChapters-7M: Video Chapters at Scale",
-      "authors": "Antoine Yangs,Arsha Nagrani,Ivan Laptev,Josef Sivic, Cordelia Schmid",
-      "pdfLink": "https://arxiv.org/pdf/2309.13952.pdf",
-      "codeLink": "https://github.com/antoyang/VidChapters"
-    },
-    {
-      "title": "VidChapters-7M: Video Chapters at Scale",
-      "authors": "Antoine Yangs,Arsha Nagrani,Ivan Laptev,Josef Sivic, Cordelia Schmid",
-      "pdfLink": "https://arxiv.org/pdf/2309.13952.pdf",
-      "codeLink": "https://github.com/antoyang/VidChapters"
-    }
-  ]
+    "codes": [
+        {
+            "title": "基于沐曦MXMACA运算平台的SpConv算子优化",
+            "type": "校企合作项目",
+            "intro": "MXMACA®是由沐曦推出的一种采用通用并行计算架构解决复杂计算问题的运算平台。它包含了支持沐曦曦云®系列GPU的驱动程序、编译器、数学库、通信库，集成了通用计算和机器学习框架，为科学家、研究员以及各个应用领域的行业专家们提供了高灵活性和高性能的开放式软件平台。基于沐曦MXMACA运算平台的SpConv算子优化项目基于MXMACA®计算平台完成SpConv的基本功能开发、性能优化、以及对应的Auto-tuning方案设计及实现，最终生成针对沐曦MXMACA运算平台上的SpConv高性能算子库。",
+            "image": "/data/projects/muxi.jpg",
+            "pdfLink": "#"
+        }
+    ]
 }

@@ -1,55 +1,35 @@
 {
   "professor": [
     {
-      "name": "XXX",
-      "img": "/resource/demo.jpg",
-      "field": "计算机视觉",
-      "title": "教授",
-      "profileUrl": "ZyKINvice.cn"
+      "name": "段鹏飞",
+      "img": "/data/img/dpf.jpg",
+      "field": "自然语言处理",
+      "title": "副教授",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/201505/t20150527_876872.shtml"
     },
     {
-      "name": "XXX",
-      "img": "/resource/demo.jpg",
-      "field": "计算机视觉",
-      "title": "教授",
-      "profileUrl": "ZyKINvice.cn"
+      "name": "陈亚雄",
+      "img": "/data/img/cyx.png",
+      "field": "多模态学习",
+      "title": "教授（研究员）",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240102_982188.shtml"
     },
     {
-      "name": "XXX",
-      "img": "/resource/demo.jpg",
+      "name": "荣毅",
+      "img": "/data/img/ry.jpeg",
       "field": "计算机视觉",
-      "title": "教授",
-      "profileUrl": "ZyKINvice.cn"
+      "title": "助理研究员",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202402/t20240226_985498.shtml"
     },
     {
-      "name": "XXX",
-      "img": "/resource/demo.jpg",
+      "name": "龚腾飞",
+      "img": "/data/img/gtf.jpg",
       "field": "计算机视觉",
-      "title": "教授",
-      "profileUrl": "ZyKINvice.cn"
+      "title": "讲师",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240104_982472.shtml"
     }
   ],
   "postdoc": [
-    {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
-    },
-    {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
-    },
-    {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
-    },
-    {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
-    },
     {
       "name": "张三",
       "field": "自然语言处理",
@@ -58,138 +38,308 @@
   ],
   "phd": [
     {
-      "name": "张三",
+      "name": "张易方",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "黄吉瑞",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "吴瑞",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "杜光星",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "林垚",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "徐加明",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "路雄博",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "姚瑞霖",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "刘开",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "葛同與",
+      "field": "计算机视觉",
+      "profileUrl": ""
     }
   ],
   "master": [
     {
-      "name": "张三",
+      "name": "杨怡雯",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "陈慧敏",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "柴浩楠",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
+      "name": "王彦澎",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "付文钊",
+      "field": "个性化推荐",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "王宇",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
+      "name": "尚春旭",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
+      "name": "王祖灿",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
+      "name": "程玥",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "李星",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "郭静怡",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
+      "name": "施震宇",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "黄名儒",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "张子庆",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "金心杰",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
-      "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "name": "胡宗贤",
+      "field": "计算机视觉",
+      "profileUrl": ""
     },
     {
-      "name": "张三",
+      "name": "王海龙",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
+    },
+    {
+      "name": "彭镓旺",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "张雨桐",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "胡志康",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "李佳仪",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "江志伟",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "熊奕雯",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "任晓涵",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "徐满陈",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "龚杜",
+      "field": "计算机视觉",
+      "profileUrl": ""
     }
   ],
   "alumni": [
     {
-      "name": "张三",
+      "name": "尹娇柔",
       "field": "自然语言处理",
-      "profileUrl": "github.com"
+      "profileUrl": ""
+    },
+    {
+      "name": "高兴",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "方应骞",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "张治慧",
+      "field": "智能语音处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "齐昊天",
+      "field": "SLAM",
+      "profileUrl": ""
+    },
+    {
+      "name": "石茂卿",
+      "field": "路径规划",
+      "profileUrl": ""
+    },
+    {
+      "name": "陈伟",
+      "field": "异构计算",
+      "profileUrl": ""
+    },
+    {
+      "name": "万攀",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "江杨",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "黄峰",
+      "field": "分布式编译",
+      "profileUrl": ""
+    },
+    {
+      "name": "崔耀文",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "冯莹",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "胡文艳",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "路艺华",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "熊晨薇",
+      "field": "计算机视觉",
+      "profileUrl": ""
+    },
+    {
+      "name": "刘潇",
+      "field": "故障诊断",
+      "profileUrl": ""
+    },
+    {
+      "name": "邓文洁",
+      "field": "室内定位",
+      "profileUrl": ""
+    },
+    {
+      "name": "王澳星",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "李勇兵",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "龚念如",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "黄正宇",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "肖国庆",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "徐聪",
+      "field": "自然语言处理",
+      "profileUrl": ""
+    },
+    {
+      "name": "曾文杰",
+      "field": "自然语言处理",
+      "profileUrl": ""
     }
   ]
 }
