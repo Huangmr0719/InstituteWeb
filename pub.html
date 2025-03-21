@@ -83,7 +83,7 @@
                     </p>
                     
                 </div>`;
-                    paperContainer.appendChild(paperDiv); // 将每篇论文的信息添加到容器中
+                    paperContainer.appendChild(paperDiv);
                 });
             })
         document.getElementById("menuButton").addEventListener("click", function () {
@@ -101,14 +101,14 @@
         });
         window.addEventListener('resize', function () {
             var menuList = document.getElementById('menu_list');
-            if (window.innerWidth > 700) { // 假设在窗口宽度大于600像素时隐藏
+            if (window.innerWidth > 700) { 
                 menuList.style.display = 'none';
                 menuList.style.maxHeight = null;
             }
         });
         document.querySelectorAll('.bibButton').forEach(function (button, index) {
             button.addEventListener('click', function () {
-                // 获取与当前按钮对应的pre元素
+
                 var preContent = document.querySelectorAll('.bibtex')[index];
 
                 if (preContent.style.height === '0px') {
@@ -146,7 +146,6 @@
             }, 300);
         }
 
-        // 点击模态框外部关闭
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 closeModal(event.target.id);
