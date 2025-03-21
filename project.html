@@ -28,13 +28,6 @@
         </div>
         <hr>
 
-        <!-- Modal Structure for Description -->
-        <div id="descModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('descModal')">&times;</span>
-                <pre id="descContent" style="white-space: pre-wrap;"></pre>
-            </div>
-        </div>
     </div>
 
     <div id="footer-placeholder"></div>
@@ -61,31 +54,6 @@
                 });
             });
     </script>
-
-        function showDesc() {
-            var descContent = event.target.closest('.project').querySelector('.description').textContent;
-            document.getElementById('descContent').textContent = descContent;
-            var modal = document.getElementById('descModal');
-            modal.style.display = 'flex';
-            requestAnimationFrame(() => {
-                modal.classList.add('show');
-            });
-        }
-
-        function closeModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.classList.remove('show');
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-        }
-
-        // 点击模态框外部关闭
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                closeModal(event.target.id);
-            }
-        }
     </script>
 </body>
 </html>
