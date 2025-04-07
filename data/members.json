@@ -1,6 +1,13 @@
 {
   "professor": [
     {
+      "name": "陈亚雄",
+      "img": "/data/img/cyx.png",
+      "field": "多模态学习",
+      "title": "教授（研究员）",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240102_982188.shtml"
+    },
+    {
       "name": "段鹏飞",
       "img": "/data/img/dpf.jpg",
       "field": "自然语言处理",
@@ -8,11 +15,40 @@
       "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/201505/t20150527_876872.shtml"
     },
     {
-      "name": "陈亚雄",
-      "img": "/data/img/cyx.png",
-      "field": "多模态学习",
-      "title": "教授（研究员）",
-      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240102_982188.shtml"
+      "name": "龚腾飞",
+      "img": "/data/img/gtf.jpg",
+      "field": "计算机视觉",
+      "title": "讲师",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240104_982472.shtml"
+    },
+    
+    {
+      "name": "刘唯真",
+      "img": "/data/img/lwz.jpg",
+      "field": "农业图像挖掘",
+      "title": "副教授",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240104_982472.shtml"
+    },
+    {
+      "name": "米晓新",
+      "img": "",
+      "field": "自动驾驶",
+      "title": "讲师",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202503/t20250324_1322480.shtml"
+    },
+    {
+      "name": "彭静",
+      "img": "/data/img/pj.png",
+      "field": "生物信息",
+      "title": "副教授",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/201610/t20161012_876959.shtml"
+    },
+    {
+      "name": "饶文碧",
+      "img": "/data/img/rwb.png",
+      "field": "机器学习与人工智能",
+      "title": "教授",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/201505/t20150527_876875.shtml"
     },
     {
       "name": "荣毅",
@@ -22,11 +58,18 @@
       "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202402/t20240226_985498.shtml"
     },
     {
-      "name": "龚腾飞",
-      "img": "/data/img/gtf.jpg",
+      "name": "王亮亮",
+      "img": "/data/img/wll.jpg",
       "field": "计算机视觉",
       "title": "讲师",
-      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240104_982472.shtml"
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/202401/t20240104_982471.shtml"
+    },
+    {
+      "name": "朱安娜",
+      "img": "/data/img/zan.png",
+      "field": "计算机视觉",
+      "title": "副教授",
+      "profileUrl": "http://cst.whut.edu.cn/xygk/szdw/201809/t20180911_876961.shtml"
     }
   ],
   "postdoc": [
