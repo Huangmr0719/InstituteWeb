@@ -138,14 +138,14 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 15px;  /* 减小间距 */
+    gap: 10px;  /* 减小间距 */
     justify-content: flex-end;  /* 右对齐 */
 }
 
 .header_list li a {
-    color: #333;
+    color: #000000;
     text-decoration: none;
-    font-size: 30px;  
+    font-size: 26px;  
     white-space: nowrap;
     font-weight: 500;
     padding: 10px 0;
@@ -153,7 +153,7 @@
 }
 
 .header_list li a:hover {
-    color: #1976D2;
+    color:#003366;
 }
 
 /* 移除之前的媒体查询中的冲突样式 */
@@ -203,6 +203,23 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
+}
+
+.footer-map {
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 500px;
+}
+
+.footer-info {
+    margin-bottom: 20px;
 }
 
 .footer-section {
@@ -697,4 +714,54 @@ hr {
     .site-body {
         margin: 0 5%;
     }
+}
+
+.wechat-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.qrcode {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 4px;
+    z-index: 1000;
+}
+
+.wechat-container:hover .qrcode {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 20px);  /* 调整悬浮位置 */
+}
+
+/* 添加移动端适配 */
+@media (max-width: 768px) {
+    .qrcode {
+        min-width: 300px;
+        max-width: 90vw;
+        padding: 15px;
+    }
+
+
+.wechat-container:hover .qrcode {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(10px);
+}
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-content {
+    gap: 40px;
 }
